@@ -2,6 +2,7 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import './Login.css';
 
 const Login = () => {
   const handleSuccess = async (credentialResponse) => {
@@ -24,7 +25,6 @@ const Login = () => {
 
   return (
     <div>
-      <h2>Login with Google</h2>
       <GoogleLogin
         onSuccess={handleSuccess}
         onError={() => console.log('Google Login Failed')}
